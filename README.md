@@ -17,12 +17,12 @@ You can learn more about using [certbot-dns-online plugin here](https://pypi.org
 
 You can use Docker Hub registry:
 ```shell
-docker pull alexandrepavy/certbot-dns-online:v2.4.0
+docker pull alexandrepavy/certbot-dns-online:v2.5.0
 ```
 
 or using GitHub Container registry (You will need to update the image name on all following commands):
 ```shell
-docker pull ghcr.io/alexandrepavy/certbot-dns-online:v2.4.0
+docker pull ghcr.io/alexandrepavy/certbot-dns-online:v2.5.0
 ```
 
 Grab your online api token on [console.online.net/en/api/access](https://console.online.net/en/api/access) and create
@@ -38,7 +38,7 @@ docker run -it --rm \
     -v "/etc/letsencrypt:/etc/letsencrypt" \
     -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
     -v "/root/online_credential.ini:/root/online_credential.ini" \
-    alexandrepavy/certbot-dns-online:v2.4.0 certonly --test-cert --dry-run --non-interactive --agree-tos \
+    alexandrepavy/certbot-dns-online:v2.5.0 certonly --test-cert --dry-run --non-interactive --agree-tos \
         --authenticator dns-online \
         --dns-online-credentials /root/online_credential.ini \
         --dns-online-propagation-seconds 60 \
@@ -63,7 +63,7 @@ docker run -it --rm \
     -v "/etc/letsencrypt:/etc/letsencrypt" \
     -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
     -v "/root/online_credential.ini:/root/online_credential.ini" \
-    alexandrepavy/certbot-dns-online:v2.4.0 certonly --test-cert --non-interactive --agree-tos \
+    alexandrepavy/certbot-dns-online:v2.5.0 certonly --test-cert --non-interactive --agree-tos \
         --authenticator dns-online \
         --dns-online-credentials /root/online_credential.ini \
         --dns-online-propagation-seconds 60 \
@@ -93,7 +93,7 @@ List your certificates:
 docker run -it --rm \
     -v "/etc/letsencrypt:/etc/letsencrypt" \
     -v "/lib/letsencrypt:/var/lib/letsencrypt" \
-    alexandrepavy/certbot-dns-online:v2.4.0 certificates
+    alexandrepavy/certbot-dns-online:v2.5.0 certificates
 ```
 
 Renew certificates:
@@ -102,7 +102,7 @@ docker run -it --rm \
     -v "/etc/letsencrypt:/etc/letsencrypt" \
     -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
     -v "/root/online_credential.ini:/root/online_credential.ini" \
-    alexandrepavy/certbot-dns-online:v2.4.0 renew --test-cert --dry-run
+    alexandrepavy/certbot-dns-online:v2.5.0 renew --test-cert --dry-run
 ```
 
 Delete a certificate:
@@ -110,7 +110,7 @@ Delete a certificate:
 docker run -it --rm \
     -v "/etc/letsencrypt:/etc/letsencrypt" \
     -v "/lib/letsencrypt:/var/lib/letsencrypt" \
-    alexandrepavy/certbot-dns-online:v2.4.0 delete --non-interactive --cert-name domain.tld
+    alexandrepavy/certbot-dns-online:v2.5.0 delete --non-interactive --cert-name domain.tld
 ```
 
 Go to **production** by removing `--test-cert` option to use production let's encrypt.
@@ -119,7 +119,7 @@ docker run -it --rm \
     -v "/etc/letsencrypt:/etc/letsencrypt" \
     -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
     -v "/root/online_credential.ini:/root/online_credential.ini" \
-    alexandrepavy/certbot-dns-online:v2.4.0 certonly --non-interactive --agree-tos \
+    alexandrepavy/certbot-dns-online:v2.5.0 certonly --non-interactive --agree-tos \
         --authenticator dns-online \
         --dns-online-credentials /root/online_credential.ini \
         --dns-online-propagation-seconds 60 \
