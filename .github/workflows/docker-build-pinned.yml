@@ -40,7 +40,7 @@ jobs:
             alexandrepavy/certbot-dns-online
             ghcr.io/alexandrepavy/certbot-dns-online
           tags: |
-            type=raw,value=v2.4.0
+            type=raw,value=v2.5.0
 
       - name: Build and push
         uses: docker/build-push-action@v4.0.0
